@@ -52,6 +52,7 @@ public class RegisterServlet extends HttpServlet {
         }
         String sql1="insert into usertable(id,username,password,email,gender,birthdate)" +
                 "values(?,?,?,?,?,?)";
+
         try {
             PreparedStatement preparedStatement= con.prepareStatement(sql1);
             preparedStatement.setInt(1,id+1);
@@ -95,6 +96,7 @@ public class RegisterServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         writer.println("</table>");
         writer.println("</BODY>");
         writer.println("</HTML>");
