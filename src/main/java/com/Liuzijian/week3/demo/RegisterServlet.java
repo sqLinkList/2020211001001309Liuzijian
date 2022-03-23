@@ -12,17 +12,7 @@ public class RegisterServlet extends HttpServlet {
     Connection con=null;
     @Override
     public void init() throws ServletException {
-//-------------------------------------------------------------
-        //String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        //String url="jdbc:sqlserver://localhost:1433;database=userDB;encrypt=false";
-        //String username="sa";
-        //String password="123456";
-        //ServletConfig config = getServletConfig();
-        //String driver=config.getInitParameter("driver");
-        //String url=config.getInitParameter("url");
-        //String username=config.getInitParameter("username");
-        //String password=config.getInitParameter("password");
-//-------------------------------------------------------------
+
         ServletContext context=getServletContext();
         String driver=context.getInitParameter("driver");
         String url=context.getInitParameter("url");
